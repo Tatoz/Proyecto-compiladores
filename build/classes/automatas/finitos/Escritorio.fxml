@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automatas.finitos.EscritorioController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <MenuBar layoutY="1.0" onDragDetected="#autor" prefHeight="26.0" prefWidth="320.0">
+        <menus>
+          <Menu fx:id="menu" mnemonicParsing="false" text="Nuevo">
+            <items>
+              <MenuItem id="automataF" fx:id="automataF" mnemonicParsing="false" onAction="#nuevo" text="Automata finito" />
+                  <MenuItem fx:id="analizador" mnemonicParsing="false" onAction="#analizador" text="Analizador Léxico" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Autor">
+               <items>
+                  <MenuItem fx:id="autor" mnemonicParsing="false" onAction="#autor" text="Autor" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Salir">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+    </children>
+</AnchorPane>

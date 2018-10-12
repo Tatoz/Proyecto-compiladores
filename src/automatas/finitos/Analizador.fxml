@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FDD692;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automatas.finitos.AnalizadorController">
+   <children>
+      <Button fx:id="btnAna" layoutX="254.0" layoutY="174.0" mnemonicParsing="false" onAction="#analiza" text="Analiza" />
+      <TextArea fx:id="taAuto" layoutX="26.0" layoutY="55.0" prefHeight="290.0" prefWidth="213.0" promptText="Introduce las instrucciones del autómata iniciando con mayúsculas" />
+      <TextArea fx:id="taLex" editable="false" layoutX="340.0" layoutY="55.0" prefHeight="290.0" prefWidth="237.0" promptText="Aquí se mostrarán los resultados del analizador léxico" />
+      <Label layoutX="26.0" layoutY="26.0" prefHeight="18.0" prefWidth="146.0" text="Introduce texto" />
+      <Label layoutX="340.0" layoutY="27.0" text="Analizador" />
+   </children>
+</AnchorPane>
