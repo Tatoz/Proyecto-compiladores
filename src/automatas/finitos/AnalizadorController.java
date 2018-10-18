@@ -30,7 +30,7 @@ public class AnalizadorController implements Initializable {
        //En este método esta todo el analizador para un fututo aplicar Reingeniería
        public void analiza(){
        //Dentro de este String coloco las palabras reservadas/Tokens del analizar para que al momento de ingresarlos sean reconocidos
-       String pr ="(Automata)|(Estados)|(Inicial)|(Aceptacion)|(Alfabeto)|(Transiciones)|(:)|(,)|(;)|([{|}]+)|(Fin)|([0-9]+)";
+       String pr ="(Automata)|(Estados)|(Inicial)|(Aceptacion)|(Alfabeto)|(Transiciones)|(:)|(,)|(;)|(Fin)|([0-9]+)|([(-)]+)|(-)|([*|+|'|?|¡|¿|_]+)";
        
       /**
        * Utilizo esta cadena como ejemplo para simplemente copiar y pegar en el analizador léxico
@@ -53,7 +53,7 @@ public class AnalizadorController implements Initializable {
        
            while (matcher.find()) {
                String tokenTipo1 = matcher.group(1);
-               if(tokenTipo1 != null){
+                if(tokenTipo1 != null){
                   System.out.println("Inicio de automata: "+ tokenTipo1);
                    //taLex.setText("Palabra Reservada: "+tokenTipo1+"\n");
                    taLex.appendText("Inicio de autómata: "+tokenTipo1+"\n");
@@ -122,27 +122,39 @@ public class AnalizadorController implements Initializable {
                
                String tokenTipo10 = matcher.group(10);
                if(tokenTipo10 != null){
-                   System.out.println("Parentesis: "+ tokenTipo10);
-                   //taLex.setText("Parentesis: "+tokenTipo10);
-                   taLex.appendText("Parentesis: "+tokenTipo10+"\n");
+                  System.out.println("Fin automata: "+ tokenTipo10);
+                   taLex.appendText("Fin Automata: "+tokenTipo10+"\n");
                    
                }
                
-               String tokenTipo11 = matcher.group(11);
+                String tokenTipo11 = matcher.group(11);
                if(tokenTipo11 != null){
-                  System.out.println("Fin automata: "+ tokenTipo11);
-                   taLex.appendText("Fin Automata: "+tokenTipo11+"\n");
-                   
-               }
-               
-                String tokenTipo12 = matcher.group(12);
-               if(tokenTipo12 != null){
-                   System.out.println("Valor: "+ tokenTipo12);
-                   taLex.appendText("Valor: "+tokenTipo12+"\n");
+                   System.out.println("Valor: "+ tokenTipo11);
+                   taLex.appendText("Valor: "+tokenTipo11+"\n");
                   
                }
+               String tokenTipo12 = matcher.group(12);
+               if(tokenTipo12 != null){
+                   System.out.println("Parentesis: "+ tokenTipo12);
+                   taLex.appendText("Parentesis: "+tokenTipo12+"\n");
+                  
+               }
+               String tokenTipo13 = matcher.group(13);
+               if(tokenTipo13 != null){
+                   System.out.println("Guion: "+ tokenTipo13);
+                   taLex.appendText("Guión: "+tokenTipo13+"\n");
+               }
+                 String tokenTipo14 = matcher.group(14);
+               if(tokenTipo14 != null){
+                   System.out.println("Caracter incorrecto: "+ tokenTipo14);
+                   taLex.appendText("Caracter incorrecto: "+tokenTipo14+"\n");
+               }
                
-           }
+           } 
+                   
+                   
+                   
+                   
        }
        
 
