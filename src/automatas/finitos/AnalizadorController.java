@@ -129,8 +129,8 @@ public class AnalizadorController implements Initializable {
                
                 String tokenTipo11 = matcher.group(11);
                if(tokenTipo11 != null){
-                   System.out.println("Valor: "+ tokenTipo11);
-                   taLex.appendText("Valor: "+tokenTipo11+"\n");
+                   System.out.println("Dígito: "+ tokenTipo11);
+                   taLex.appendText("Dígito: "+tokenTipo11+"\n");
                   
                }
                String tokenTipo12 = matcher.group(12);
