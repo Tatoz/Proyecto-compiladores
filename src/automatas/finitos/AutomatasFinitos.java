@@ -24,9 +24,12 @@ public class AutomatasFinitos extends Application {
         Scene scene = new Scene(root);
         
         stage.setTitle("Primer corte Compiladores");
-        stage.setWidth(500);
-        stage.setHeight(300);
+        //stage.setWidth(500);
+        //stage.setHeight(300);
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        
         stage.show();
     }
 

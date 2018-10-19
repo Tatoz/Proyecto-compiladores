@@ -23,7 +23,9 @@ public class AnalizadorController implements Initializable {
        @FXML
        private Button btnAna;
        @FXML
-       public TextArea taAuto, taLex;
+       public TextArea taLex;
+       @FXML
+       public TextArea taAuto;
        
        
        

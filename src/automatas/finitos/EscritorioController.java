@@ -18,6 +18,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
@@ -33,58 +34,57 @@ import javafx.stage.Stage;
  * @author Juan Carlos
  */
 public class EscritorioController implements Initializable {
-    
-    
- 
+
     @FXML
     private MenuItem automataF, analizador, autor;
-   
-    
-     
-    
 
-    
-    
     @FXML
     private void nuevo(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Automata.fxml"));
-        
+
         Scene scene = new Scene(root);
         Stage stage = new Stage();
-        
+
         stage.setWidth(500);
         stage.setHeight(300);
         stage.setTitle("Automata Finito");
         stage.setScene(scene);
         stage.show();
     }
-    
-       @FXML
+
+    @FXML
     private void analizador(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Analizador.fxml"));
-        
+
         Scene scene = new Scene(root);
         Stage stage = new Stage();
-        
-        stage.setWidth(700);//Ancho
-        stage.setHeight(500);//Alto
+
+        // stage.setWidth(700);//Ancho
+        //stage.setHeight(500);//Alto
         stage.setTitle("Analizador léxico");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+        
     }
-    
-        @FXML
-           public void autor(){
-           Alert alert = new Alert(Alert.AlertType.INFORMATION, 
-                        "Autor: Juan Carlos Stempreiss Vidal"
-                                + "Matricula: 143422", 
-                        ButtonType.CLOSE);
-       }
-       
-    
+
+    @FXML
+    public void autor() {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Acerca del autor");
+        alert.setContentText("Juan Carlos Stempreiss Vidal 143422");
+
+        alert.showAndWait();
+    }
+    @FXML
+    public void salir(){
+        System.exit(0);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }
