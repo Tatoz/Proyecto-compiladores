@@ -74,8 +74,8 @@ public class EscritorioController implements Initializable {
         alert.setHeaderText(null);
         alert.setTitle("Acerca del autor");
         alert.setContentText("Juan Carlos Stempreiss Vidal 143422");
-
         alert.showAndWait();
+        
     }
     @FXML
     public void salir(){

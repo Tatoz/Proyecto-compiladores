@@ -17,7 +17,7 @@
                   <MenuItem fx:id="analizador" mnemonicParsing="false" onAction="#analizador" text="Analizador Léxico" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" onAction="#autor" text="Autor">
+          <Menu mnemonicParsing="false" text="Autor">
                <items>
                   <MenuItem fx:id="autor" mnemonicParsing="false" onAction="#autor" text="Autor" />
                </items></Menu>
