@@ -15,6 +15,7 @@
             <items>
               <MenuItem id="automataF" fx:id="automataF" mnemonicParsing="false" onAction="#nuevo" text="Automata finito" />
                   <MenuItem fx:id="analizador" mnemonicParsing="false" onAction="#analizador" text="Analizador Léxico" />
+                  <MenuItem fx:id="sintactico" mnemonicParsing="false" onAction="#sintactico" text="Analizador Sintáctico" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Autor">

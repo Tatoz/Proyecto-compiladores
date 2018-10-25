@@ -5,6 +5,7 @@
  */
 package automatas.finitos;
 
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -36,11 +37,11 @@ import javafx.stage.Stage;
 public class EscritorioController implements Initializable {
 
     @FXML
-    private MenuItem automataF, analizador, autor;
+    private MenuItem automataF, analizador, sintactico, autor;
 
     @FXML
     private void nuevo(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Automata.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/automatas/finitos/Automata.fxml"));
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -54,7 +55,7 @@ public class EscritorioController implements Initializable {
 
     @FXML
     private void analizador(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Analizador.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/analizador/lexico/Analizador.fxml"));
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -62,6 +63,22 @@ public class EscritorioController implements Initializable {
         // stage.setWidth(700);//Ancho
         //stage.setHeight(500);//Alto
         stage.setTitle("Analizador léxico");
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.show();
+        
+    }
+    
+        @FXML
+    private void sintactico(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/analizador/sintactico/Sintactico.fxml"));
+
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+
+        // stage.setWidth(700);//Ancho
+        //stage.setHeight(500);//Alto
+        stage.setTitle("Analizador Sintáctico");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();

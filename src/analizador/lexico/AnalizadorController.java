@@ -1,4 +1,4 @@
-package automatas.finitos;
+package analizador.lexico;
 
 import java.net.URL;
 import java.util.ResourceBundle;

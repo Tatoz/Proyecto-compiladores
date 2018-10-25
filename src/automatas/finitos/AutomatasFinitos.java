@@ -19,7 +19,7 @@ public class AutomatasFinitos extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Escritorio.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/automatas/finitos/Escritorio.fxml"));
         
         Scene scene = new Scene(root);
         

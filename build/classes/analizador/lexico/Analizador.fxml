@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="377.0" prefWidth="738.0" style="-fx-background-color: #3D3D3D;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automatas.finitos.AnalizadorController">
+<AnchorPane id="AnchorPane" prefHeight="377.0" prefWidth="738.0" style="-fx-background-color: #3D3D3D;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="analizador.lexico.AnalizadorController">
    <children>
       <Button fx:id="btnAna" layoutX="330.0" layoutY="176.0" mnemonicParsing="false" onAction="#analiza" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #2621CF;" text="Analizar" textFill="WHITE">
          <font>
