@@ -51,6 +51,7 @@ public class SintacticoController implements Initializable {
         }
         return pila.pilaVacia();
     }
+    
     @FXML   
     private void mostrarValidacion(){
         if (validarExpresion()) {
@@ -63,7 +64,7 @@ public class SintacticoController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(null);
         alert.setTitle("Resultado");
-        alert.setContentText("Datos mal");
+        alert.setContentText("Datos mal introducidos, verifique cadena");
         alert.showAndWait();
         }
     }
